@@ -37,3 +37,8 @@ Additional analysis of the dataset are in the presentation files:
 **Accidents_table_presentation_final_eng.pptx**
 and its pdf version
 **Accidents_table_presentation_final_eng.pdf**
+
+## 3) Interactive 3D scatterplot (GUI)
+folder: /DataRepresentations/3Dscatter
+done: 2024
+Plotting 3 dimensional (X-Y-Z) data using matplotlib 3D scatter plot in a GUI. Rotating and zooming in specified ranges available.
