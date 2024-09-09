@@ -8,11 +8,13 @@ Plotting 3 dimensional (X-Y-Z) data using matplotlib 3D scatter plot. Two datase
 2) **iris (flower) dataset** from Python __scikitLearn__ package [Test Iris]
 With the help of this (fixed window size) GUI 3 dimansional data can be (scatter) plotted and rearranged 
 - by limiting the range along one or all axis,
-- by rotating the plot with mouse gestures.
+- by rotating the plot with mouse gestures.<br>
+![rotate plot](./fig/plot3Dgui_02.gif)
 
 Key Features:<br>
     1)  **Buttons**<br>
         A) The [Test Random] and [Test Iris] buttons load the corresponding dataset and plot it.<br>
+		![load data](./fig/plot3Dgui_01.gif)
         B) Apply Button:
          when clicked, it retrieves the values from the editable fields (see below) and applies them to the plot, updating the axis limits.<br>
          No field should remain empty!<br>
@@ -25,7 +27,8 @@ Key Features:<br>
     2) **Editable Fields**<br>
         Each axis (X, Y, Z) has a pair of fields for the minimum and maximum values to limit the related axis to a certain range.<br>
         These fields are editable, allowing users to input custom values and consequently exclude some parts of the full dataset from the plot.<br>
-        Push "Apply" button after limits have been modified.
+        Push "Apply" button after limits have been modified.<br>
+		![rescale data](./fig/plot3Dgui_03.gif)
     
     3) **Title (Label)** a text indicating the title of the current plot.<br>
 

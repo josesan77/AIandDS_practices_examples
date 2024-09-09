@@ -77,10 +77,12 @@ from sklearn import datasets
 iris = datasets.load_iris()
 irisX = iris.data
 irisy = iris.target
+global x_min, x_max, y_min, y_max, z_min, z_max
 
 class Plot3DWidget(FigureCanvas):
     # Signal to update text in MainWindow
     update_text = pyqtSignal(str)
+    update_editables = pyqtSignal()
     
     def __init__(self, parent=None):
         
@@ -96,7 +98,7 @@ class Plot3DWidget(FigureCanvas):
         self.main_window = MainWindow  # Store reference to MainWindow
         
         # Initialize the plot with random data
-        self.x_data, self.y_data, self.z_data = self.generate_random_data()
+        self.x_data, self.y_data, self.z_data = np.float64(0) , np.float64(0), np.float64(0) #self.generate_random_data()
         
         self.cluster_button = QPushButton('TEST Iris') # Model
         self.cluster_button.setFixedWidth(60)
@@ -114,6 +116,7 @@ class Plot3DWidget(FigureCanvas):
         return x, y, z
 
     def plot_random_data(self):
+        global x_min, x_max, y_min, y_max, z_min, z_max
         model = 1
         # Clear the current plot
         self.ax.clear()
@@ -140,10 +143,11 @@ class Plot3DWidget(FigureCanvas):
         
         # Emit a signal to update the text panel in the main window
         self.update_text.emit('Plot: Random X-Y-Z data - (0-100)')
+        self.update_editables.emit()
         
     def plot_clusters_data(self):
         global irisX, first_run, model
-        
+        global x_min, x_max, y_min, y_max, z_min, z_max
         # Clear the current plot
         self.ax.clear()
 
@@ -169,6 +173,7 @@ class Plot3DWidget(FigureCanvas):
         
         # Emit a signal to update the text panel in the main window
         self.update_text.emit('Plot: SciKitLearn - Iris dataset')
+        self.update_editables.emit()
         
     def plot_XYZ(self, X, Y, Z):
         self.x_data, self.y_data, self.z_data = X, Y, Z
@@ -220,6 +225,7 @@ class MainWindow(QMainWindow):
         self.text_panel.setFixedHeight(30)
         # Connect the update_text signal to the method that updates the label
         self.plot_widget.update_text.connect(self.update_text_panel)
+        self.plot_widget.update_editables.connect(self.set_optimal_limits_to_fields)
     
         # Create the TEST button (top left)
         self.model_button = QPushButton('TEST Random') # Model
@@ -278,7 +284,7 @@ class MainWindow(QMainWindow):
         left_layout.addWidget(self.clear_button)
     
         # Set initial values for the editable fields based on optimal limits
-        self.set_optimal_limits_to_fields(first_run, model)
+        self.set_optimal_limits_to_fields()
         
         right_layout = QVBoxLayout()
         right_layout.addWidget(self.text_panel)  # Add the QLabel to your layout
@@ -307,7 +313,8 @@ class MainWindow(QMainWindow):
         self.text_panel.setText(new_text)
         self.text_panel.repaint()  # Force label refresh
 
-    def set_optimal_limits_to_fields(self, first_run, model):
+    def set_optimal_limits_to_fields(self):
+        global x_min, x_max, y_min, y_max, z_min, z_max
         #Set the optimal axis limits to the editable fields.#
         x_min, x_max, y_min, y_max, z_min, z_max = self.plot_widget.get_optimal_limits()
         
@@ -337,10 +344,11 @@ class MainWindow(QMainWindow):
 
     def reset_limits(self):
         #Reset the axis limits to the default optimal values.#
-        self.set_optimal_limits_to_fields(first_run, model)
+        self.set_optimal_limits_to_fields()
         self.apply_limits()  # Reapply the default limits
         
     def plot_random_data(self):
+        global x_min, x_max, y_min, y_max, z_min, z_max
         #Calls the plot_random_data method of Plot3DWidget#
         self.plot_widget.plot_random_data()
         self.text_panel.setText('Plot: Random X-Y-Z data - (0-100)')  # Update text in the panel
@@ -350,10 +358,12 @@ class MainWindow(QMainWindow):
         self.update_text.emit('Plot: Random X-Y-Z data - (0-100)')
         
     def plot_clusters_data(self):
+        global x_min, x_max, y_min, y_max, z_min, z_max
         #Calls the plot_random_data method of Plot3DWidget#
         self.plot_widget.plot_clusters_data()
         self.text_panel.setText('Plot: SciKitLearn - Iris dataset')  # Update text in the panel
         self.update_text_panel(self, 'Plot: SciKitLearn - Iris dataset')
+        self.set_optimal_limits_to_fields(self)
         # Force the label to refresh in case UI is lagging behind
         self.text_panel.repaint() 
         
