@@ -22,14 +22,12 @@ Key Features:<br>
          the axis limits are reset to their optimal values (which are the minimum and maximum of the actual data points along each corresponding axis).<br>
          This ensures that all points become visible. Use this button if any plot axis range has been changed previously.<br>
         D) Clear button:<br>
-         all loaded data is cleared from the plot.
-         
+         all loaded data is cleared from the plot.<br>
     2) **Editable Fields**<br>
         Each axis (X, Y, Z) has a pair of fields for the minimum and maximum values to limit the related axis to a certain range.<br>
         These fields are editable, allowing users to input custom values and consequently exclude some parts of the full dataset from the plot.<br>
         Push "Apply" button after limits have been modified.<br>
 		![rescale data](./fig/plot3Dgui_03.gif)
-    
     3) **Title (Label)** a text indicating the title of the current plot.<br>
 
 Original idea came from a clustered data plot in which a part of the full dataset should have been shown only and verified from different angles. This is not doable with a simple Matplotlib plot.
