@@ -10,14 +10,14 @@ Plotting 3 dimensional (X-Y-Z) data using matplotlib 3D scatter plot. Two datase
 With the help of this (fixed window size) GUI 3 dimansional data can be (scatter) plotted and rearranged 
 - by limiting the range along one or all axis,
 - by rotating the plot with mouse gestures.<br>
-Load data ![load data](./fig/plot3Dgui_01.gif)<br>
-Rotate plot ![rotate plot](./fig/plot3Dgui_02.gif)<br>
-Rescale data ![rescale data](./fig/plot3Dgui_03_large.gif)<br>
+Load data <br>![load data](./fig/plot3Dgui_01.gif)<br>
+Rotate plot <br>![rotate plot](./fig/plot3Dgui_02.gif)<br>
+Rescale data <br>![rescale data](./fig/plot3Dgui_03_large.gif)<br>
 
 ### Key Features:
 1)  **Buttons**<br>
 	A) The [Test Random] and [Test Iris] buttons load the corresponding dataset and plot it.<br>
-	Load data ![load data](./fig/plot3Dgui_01.gif)<br>
+	Load data <br>![load data](./fig/plot3Dgui_01.gif)<br>
 	B) Apply Button:
 	 when clicked, it retrieves the values from the editable fields (see below) and applies them to the plot, updating the axis limits.<br>
 	 No field should remain empty!<br>
@@ -30,7 +30,7 @@ Rescale data ![rescale data](./fig/plot3Dgui_03_large.gif)<br>
 	Each axis (X, Y, Z) has a pair of fields for the minimum and maximum values to limit the related axis to a certain range.<br>
 	These fields are editable, allowing users to input custom values and consequently exclude some parts of the full dataset from the plot.<br>
 	Push "Apply" button after limits have been modified.<br>
-Rescale data ![rescale data](./fig/plot3Dgui_03.gif)
+Rescale data <br>![rescale data](./fig/plot3Dgui_03.gif)
 3) **Title (Label)** a text indicating the title of the current plot.<br>
 
 Original idea came from a clustered data plot in which a part of the full dataset should have been shown only and verified from different angles. This is not doable with a simple Matplotlib plot.
@@ -69,4 +69,6 @@ printed (platform independent versions): interactive3Dplot.html and interactive3
 
 **@author: Data4every1**<br>
 Created on Thu Sep 5 20:58:00 2024<br>
-Animated gif images created from mp4 https://ezgif.com/
+Animated gif images created from mp4 using
+https://ezgif.com/video-to-gif
+https://cloudconvert.com/mp4-to-gif
