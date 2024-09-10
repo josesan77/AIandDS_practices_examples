@@ -1,11 +1,12 @@
 # AI and DataScience practices&examples
 Exercises, problems and solutions, practices related to Artificial Intelligence and Data Science tasks and courses
 
-Problem solving tasks made with **Jupyter Notebook**.
+Problem solving tasks made with **Jupyter Notebook** or with **Python**.
 
 Libraries: 
 ## 1) DataCamp Notebook for eCommerce data analysis; a python based solution for three questions raised by DataCamp. (created 2024.07.27.)
-folder: /DataCamp/eCommerce_Analysis<br>
+![eCommerce returns](./DataCamp/eCommerce_Analysis/fig/products_returnFreqs_quantity.png)<br>
+folder: ./DataCamp/eCommerce_Analysis<br>
 done: 2024<br>
 DataCamp is a website offering tutorials, education in DataScience, Machine learning, ... and offers notebook for data manipulation and immediate (simple) plots. Large variety of python modules are available (for import).
 
@@ -24,7 +25,8 @@ Jupyter Notebook 7.0.8 was tested for compatibility.
 All above listed files are zipped in: datacamp_workspace.zip 
 
 ## 2) JDS Academy - Accidents database analysis
-folder: /JDS_academy<br>
+![Accidents in EU countries](./JDS_academy/accidents/fig/accidents_countries.png)<br>
+folder: ./JDS_academy<br>
 done: 2020<br>
 https://data36.com/<br>
 International car accident database containing registered car accidents from several countries of Europe (2000-2011).
@@ -39,7 +41,8 @@ and its pdf version
 **Accidents_table_presentation_final_eng.pdf**
 
 ## 3) Interactive 3D scatterplot (GUI)
-folder: [DataRepresentations/3Dscatter](./DataRepresentations/3Dscatter/README.md)<br>
+![Rotate 3D plot](./DataRepresentations/3Dscatter/fig/plot3Dgui_02.gif)<br>
+folder: [./DataRepresentations/3Dscatter](./DataRepresentations/3Dscatter/README.md)<br>
 done: 2024<br>
-Plotting 3 dimensional (X-Y-Z) data using matplotlib 3D scatter plot in a GUI. Rotating and zooming in specified ranges available.
+Plotting 3 dimensional (X-Y-Z) data using matplotlib 3D scatter plot in a GUI. Rotating and zooming in specified ranges available.<br>
 
