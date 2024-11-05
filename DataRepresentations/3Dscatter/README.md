@@ -63,9 +63,9 @@ folder: /fig/
 container of figures involved in this Readme
 
 ### Notes2: bugfixed Jupyter Notebook - now really interactive
-folder: /jupyter_nb/
-test file: interactive3Dplot.ipynb
-printed (platform independent versions): interactive3Dplot.html and interactive3Dplot.pdf
+folder: /jupyter_nb/<br>
+test file: interactive3Dplot.ipynb<br>
+printed (platform independent versions): interactive3Dplot.html and interactive3Dplot.pdf<br>
 
 **@author: Data4every1**<br>
 Created on Thu Sep 5 20:58:00 2024<br>
