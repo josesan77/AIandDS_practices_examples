@@ -52,7 +52,7 @@ A simple example of dynamic query parameter changing using a Streamlit interacti
 done: Sept 2024<br>
 Another Spark Notebook example of Machine Learning with Snowflake, using Forecast model.
 ![ML Forecasting](./SnowFlake/NoteBooks/Forecasting/imgs/forecast2_15_m.png)<br>
-Snowflake folder: [./Snowflake/](./Snowflake/README.md)<br>
+Snowflake folder: [./Snowflake/](./SnowFlake/README.md)<br>
 done: Sept 2024<br>
 See more in the folder.<br>
 
