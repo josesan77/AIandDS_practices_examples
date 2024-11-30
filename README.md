@@ -46,3 +46,13 @@ folder: [./DataRepresentations/3Dscatter](./DataRepresentations/3Dscatter/README
 done: 2024<br>
 Plotting 3 dimensional (X-Y-Z) data using matplotlib 3D scatter plot in a GUI. Rotating and zooming in specified ranges available.<br>
 
+## 4) Snowflake notebooks
+A simple example of dynamic query parameter changing using a Streamlit interactive slider to set limit value(s) in a Spark Notebook.
+![Slider](./SnowFlake/NoteBooks/Streamlit/imgs/streamlit_sliders.png)<br>
+done: Sept 2024<br>
+Another Spark Notebook example of Machine Learning with Snowflake, using Forecast model.
+![ML Forecasting](./SnowFlake/NoteBooks/Forecasting/imgs/forecast2_15_m.png)<br>
+Snowflake folder: [./Snowflake/](./Snowflake/README.md)<br>
+done: Sept 2024<br>
+See more in the folder.<br>
+
